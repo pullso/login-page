@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login App</title>
+  <link href="./style.css" rel="stylesheet"></head>
+  <body>
+    <div class="login-page-wrapp d-flex">
+      <div class="login-form-wrap d-flex align-items-center">
+        <div class="form-card card ml-auto">
+          <div class="card-body">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="pills-registration-tab"
+                  data-toggle="pill"
+                  href="#pills-registration"
+                  role="tab"
+                  aria-controls="pills-registration"
+                  aria-selected="false"
+                  >Регистрация</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="pills-login-tab"
+                  data-toggle="pill"
+                  href="#pills-login"
+                  role="tab"
+                  aria-controls="pills-login"
+                  aria-selected="true"
+                  >Логин</a
+                >
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade"
+                id="pills-login"
+                role="tabpanel"
+                aria-labelledby="pills-login-tab"
+              >
+                <h4 class="card-title">Пожалуйста, войдите</h4>
+                <form name="loginForm">
+                  <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      aria-describedby="emailHelp"
+                      placeholder="Введите E-mail"
+                      data-required="email"
+                      data-invalid-message="Пожалуйста введите верный email example@example.com"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      placeholder="Пароль"
+                      data-required="password"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Отправить
+                  </button>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade show active"
+                id="pills-registration"
+                role="tabpanel"
+                aria-labelledby="pills-registration-tab"
+              >
+                <h4 class="card-title">
+                  Пожалуйста, введите данные для регистрации
+                </h4>
+                <form name="registrationForm">
+                  <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input
+                      required
+                      type="email"
+                      class="form-control"
+                      id="email_reg"
+                      aria-describedby="emailHelp"
+                      placeholder="Введите E-mail"
+                      data-required="email"
+                      data-invalid-message="Пожалуйста введите верный email example@example.com"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input
+                      required
+                      type="password"
+                      class="form-control"
+                      id="password_reg"
+                      placeholder="Пароль"
+                      data-required="password"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="nickname">Никнейм</label>
+                    <input
+                      required
+                      type="text"
+                      class="form-control"
+                      id="nickname"
+                      placeholder="Никнейм"
+                      data-required="nickname"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="first_name">Имя</label>
+                    <input
+                      required
+                      type="text"
+                      class="form-control"
+                      id="first_name"
+                      placeholder="Имя"
+                      data-required="first_name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="last_name">Фамилия</label>
+                    <input
+                      required
+                      type="text"
+                      class="form-control"
+                      id="last_name"
+                      placeholder="Фамилия"
+                      data-required="last_name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input
+                      required
+                      type="phone"
+                      class="form-control"
+                      id="phone"
+                      placeholder="Телефон"
+                      data-required="phone"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <select class="custom-select" id="gender_orientation">
+                      <option value="male" selected> Пол Мужской</option>
+                      <option value="female">Женский</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id=""
+                          >День рождения</span
+                        >
+                      </div>
+                      <input
+                        required
+                        type="text"
+                        class="form-control"
+                        id="date_of_birth_day"
+                        data-required="day"
+                      />
+                      <input
+                        required
+                        type="text"
+                        class="form-control"
+                        id="date_of_birth_month"
+                        data-required="month"
+                      />
+                      <input
+                        required
+                        type="text"
+                        class="form-control"
+                        id="date_of_birth_year"
+                        data-required="year"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="country">Страна</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="country"
+                      placeholder="Страна"
+                      data-required="country"
+                    />
+
+                    <ul class="list-group" id="countries-list"></ul>
+                  </div>
+                  <div class="form-group">
+                    <label for="city">Город</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="city"
+                      placeholder="Город"
+                      data-required="city"
+                    />
+                    <ul class="list-group" id="cities-list"></ul>
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Зарегистрироваться
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.login-form-wrap -->
+      <div class="login-greeting-screen d-flex align-items-center">
+        <div class="login-greeting-screen-text">
+          <h1 class="login-greeting-screen-title">
+            Добро пожаловать в наше приложение
+          </h1>
+          <p class="login-greeting-screen-description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+            inventore non accusantium earum, illo dolores reprehenderit laborum
+            ratione quos doloribus repellat eligendi deleniti. Ipsum voluptate
+            ipsa exercitationem eaque totam. A.
+          </p>
+        </div>
+      </div>
+      <!-- /.login-greeting-screen -->
+    </div>
+
+    <!-- /.login-page-wrapp -->
+  <script type="text/javascript" src="polyfill.301023a441efedbbe0a4.js"></script><script type="text/javascript" src="app.301023a441efedbbe0a4.js"></script></body>
+</html>
