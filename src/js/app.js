@@ -7,16 +7,25 @@ import { showInputError, removeInputError } from './views/form';
 import { login } from './services/auth.service';
 import { notify } from './views/notification';
 import { getNews } from './services/news.service';
+import { showTab } from './views/tabs';
 
 const { form, inputEmail, inputPassword } = UI;
 const inputs = [inputEmail, inputPassword];
 
 //* EVENTS
 
+UI.tabs.forEach((tab) => {
+  tab.addEventListener('click', (e) => {
+    e.preventDefault();
+    showTab(e);
+  });
+});
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   onSubmit();
 });
+
 inputs.forEach((input) => {
   input.addEventListener('focus', () => {
     removeInputError(input);
