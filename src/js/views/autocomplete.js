@@ -1,7 +1,7 @@
 import UI from '../config/ui.config';
 import { locations } from '../store/locations';
 
-const { inputCountry, countriesList } = UI;
+const { inputCountry, countriesList, inputGender } = UI;
 
 export function filterAutocomplete(input, list, objData) {
   let countriesArr = [];

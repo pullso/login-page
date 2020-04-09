@@ -86,9 +86,10 @@
                   <div class="form-group">
                     <label for="email">E-mail</label>
                     <input
+                      required
                       type="email"
                       class="form-control"
-                      id="_reg"
+                      id="email_reg"
                       aria-describedby="emailHelp"
                       placeholder="Введите E-mail"
                       data-required="email"
@@ -98,6 +99,7 @@
                   <div class="form-group">
                     <label for="password">Пароль</label>
                     <input
+                      required
                       type="password"
                       class="form-control"
                       id="password_reg"
@@ -108,6 +110,7 @@
                   <div class="form-group">
                     <label for="nickname">Никнейм</label>
                     <input
+                      required
                       type="text"
                       class="form-control"
                       id="nickname"
@@ -118,6 +121,7 @@
                   <div class="form-group">
                     <label for="first_name">Имя</label>
                     <input
+                      required
                       type="text"
                       class="form-control"
                       id="first_name"
@@ -128,6 +132,7 @@
                   <div class="form-group">
                     <label for="last_name">Фамилия</label>
                     <input
+                      required
                       type="text"
                       class="form-control"
                       id="last_name"
@@ -138,6 +143,7 @@
                   <div class="form-group">
                     <label for="phone">Телефон</label>
                     <input
+                      required
                       type="phone"
                       class="form-control"
                       id="phone"
@@ -146,9 +152,8 @@
                     />
                   </div>
                   <div class="form-group">
-                    <select class="custom-select" id="inputGroupSelect01">
-                      <option selected>Пол</option>
-                      <option value="male">Мужской</option>
+                    <select class="custom-select" id="gender_orientation">
+                      <option value="male" selected> Пол Мужской</option>
                       <option value="female">Женский</option>
                     </select>
                   </div>
@@ -159,9 +164,27 @@
                           >День рождения</span
                         >
                       </div>
-                      <input type="text" class="form-control" />
-                      <input type="text" class="form-control" />
-                      <input type="text" class="form-control" />
+                      <input
+                        required
+                        type="text"
+                        class="form-control"
+                        id="date_of_birth_day"
+                        data-required="day"
+                      />
+                      <input
+                        required
+                        type="text"
+                        class="form-control"
+                        id="date_of_birth_month"
+                        data-required="month"
+                      />
+                      <input
+                        required
+                        type="text"
+                        class="form-control"
+                        id="date_of_birth_year"
+                        data-required="year"
+                      />
                     </div>
                   </div>
                   <div class="form-group">
@@ -177,14 +200,15 @@
                     <ul class="list-group" id="countries-list"></ul>
                   </div>
                   <div class="form-group">
-                    <label for="coutry">Город</label>
+                    <label for="city">Город</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="coutry"
+                      id="city"
                       placeholder="Город"
-                      data-required="coutry"
+                      data-required="city"
                     />
+                    <ul class="list-group" id="cities-list"></ul>
                   </div>
                   <button type="submit" class="btn btn-primary">
                     Зарегистрироваться
