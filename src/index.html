@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Login App</title>
   </head>
   <body>
     <div class="login-page-wrapp d-flex">
@@ -15,18 +15,6 @@
               <li class="nav-item">
                 <a
                   class="nav-link active"
-                  id="pills-login-tab"
-                  data-toggle="pill"
-                  href="#pills-login"
-                  role="tab"
-                  aria-controls="pills-login"
-                  aria-selected="true"
-                  >Логин</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
                   id="pills-registration-tab"
                   data-toggle="pill"
                   href="#pills-registration"
@@ -36,10 +24,22 @@
                   >Регистрация</a
                 >
               </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="pills-login-tab"
+                  data-toggle="pill"
+                  href="#pills-login"
+                  role="tab"
+                  aria-controls="pills-login"
+                  aria-selected="true"
+                  >Логин</a
+                >
+              </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
               <div
-                class="tab-pane fade show active"
+                class="tab-pane fade"
                 id="pills-login"
                 role="tabpanel"
                 aria-labelledby="pills-login-tab"
@@ -74,12 +74,120 @@
                 </form>
               </div>
               <div
-                class="tab-pane fade"
+                class="tab-pane fade show active"
                 id="pills-registration"
                 role="tabpanel"
                 aria-labelledby="pills-registration-tab"
               >
-                Регистрация
+                <h4 class="card-title">
+                  Пожалуйста, введите данные для регистрации
+                </h4>
+                <form name="registrationForm">
+                  <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      aria-describedby="emailHelp"
+                      placeholder="Введите E-mail"
+                      data-required="email"
+                      data-invalid-message="Пожалуйста введите верный email example@example.com"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      placeholder="Пароль"
+                      data-required="password"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="nickname">Никнейм</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nickname"
+                      placeholder="Никнейм"
+                      data-required="nickname"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="first_name">Имя</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="first_name"
+                      placeholder="Имя"
+                      data-required="first_name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="last_name">Фамилия</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="last_name"
+                      placeholder="Фамилия"
+                      data-required="last_name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input
+                      type="phone"
+                      class="form-control"
+                      id="phone"
+                      placeholder="Телефон"
+                      data-required="phone"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <select class="custom-select" id="inputGroupSelect01">
+                      <option selected>Пол</option>
+                      <option value="male">Мужской</option>
+                      <option value="female">Женский</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id=""
+                          >День рождения</span
+                        >
+                      </div>
+                      <input type="text" class="form-control" />
+                      <input type="text" class="form-control" />
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="coutry">Страна</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="coutry"
+                      placeholder="Страна"
+                      data-required="coutry"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="coutry">Город</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="coutry"
+                      placeholder="Город"
+                      data-required="coutry"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Зарегистрироваться
+                  </button>
+                </form>
               </div>
             </div>
           </div>
