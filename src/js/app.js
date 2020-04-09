@@ -4,6 +4,7 @@ import '../css/style.css';
 import UI from './config/ui.config';
 import { validate } from './helpers/validate';
 import { showInputError, removeInputError } from './views/form';
+import { login } from './services/auth.service';
 
 const { form, inputEmail, inputPassword } = UI;
 const inputs = [inputEmail, inputPassword];
@@ -16,13 +17,12 @@ form.addEventListener('submit', (e) => {
 });
 inputs.forEach((input) => {
   input.addEventListener('focus', () => {
-    console.log(input);
     removeInputError(input);
   });
 });
 
 //* HANDLERS
-function onSubmit() {
+async function onSubmit() {
   inputs.forEach((item) => {
     removeInputError(item);
   });
@@ -34,6 +34,15 @@ function onSubmit() {
     }
     return isValidInput;
   });
+
+  if (!isValidForm) return;
+  try {
+    await login(inputEmail.value, inputPassword.value);
+    form.reset();
+    //show success notify
+  } catch (err) {
+    //show error notify
+  }
 
   console.log(isValidForm);
 }

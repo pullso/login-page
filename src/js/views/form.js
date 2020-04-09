@@ -28,7 +28,6 @@ export function showInputError(el) {
 export function removeInputError(el) {
   const parent = el.parentElement;
   const err = parent.querySelector('.invalid-feedback');
-  console.log('err: ', err);
 
   if (!err) return;
   el.classList.remove('is-invalid');
