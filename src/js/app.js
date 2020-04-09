@@ -5,6 +5,7 @@ import UI from './config/ui.config';
 import { validate } from './helpers/validate';
 import { showInputError, removeInputError } from './views/form';
 import { login } from './services/auth.service';
+import { notify } from './views/notification';
 
 const { form, inputEmail, inputPassword } = UI;
 const inputs = [inputEmail, inputPassword];
@@ -40,8 +41,9 @@ async function onSubmit() {
     await login(inputEmail.value, inputPassword.value);
     form.reset();
     //show success notify
+    notify({ msg: 'Успешный логин', className: 'alert-success' });
   } catch (err) {
-    //show error notify
+    notify({ msg: 'Неудачная попытка входа', className: 'alert-danger' });
   }
 
   console.log(isValidForm);
